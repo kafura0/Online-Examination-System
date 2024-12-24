@@ -34,7 +34,6 @@ class ChoiceTwo(models.Model):
 class ChoiceThree(models.Model):
     name = models.CharField(max_length=2)
 
-
 # After having passed JAMB Examination, Candidate must apply to the school for admission
 
 # To do so, candidate must fill and submit form to the Admissions Department
@@ -54,10 +53,9 @@ class Applicant_Registration(models.Model):
     gender = models.CharField(max_length=10, choices=gender_choice, default="Male")
     reg_No = models.CharField(max_length=20, default="23u764", unique=True)
     phone = models.CharField(max_length=25, default="234", unique=True)
-    choice_One = models.ForeignKey(
-    ChoiceOne, on_delete=models.CASCADE, default="1", unique=True)
-    choice_Two = models.ForeignKey(ChoiceTwo, on_delete=models.CASCADE, default="2", unique=True)
-    choice_Three = models.ForeignKey(ChoiceThree, on_delete=models.CASCADE, default="3", unique=True)
+    #choice_One = models.ForeignKey(ChoiceOne, on_delete=models.CASCADE, default="1", unique=True)
+    #choice_Two = models.ForeignKey(ChoiceTwo, on_delete=models.CASCADE, default="2", unique=True)
+    #choice_Three = models.ForeignKey(ChoiceThree, on_delete=models.CASCADE, default="3", unique=True)
     
     class Meta:        
             # verbose_name = ("")

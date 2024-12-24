@@ -1,6 +1,8 @@
 from pathlib import Path
 import os
+import django
 from django.contrib import messages
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
 MEDIA_DIR = os.path.join(BASE_DIR,'media')
@@ -141,3 +143,6 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 EMAIL_PORT = 587
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+
+# default primary key
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
